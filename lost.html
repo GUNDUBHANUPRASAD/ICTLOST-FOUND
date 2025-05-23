@@ -1,0 +1,57 @@
+<html>
+    <body>
+        <!-- Report Lost Section -->
+        <section id="report-lost-section" class="hidden">
+            <h2>Report Lost Item</h2>
+            <form id="lost-item-form" method="POST" action="submit_lost_item.php" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="lost-item-name">Item Name*</label>
+                    <input type="text" id="lost-item-name" name="item_name" required
+                    placeholder="e.g., MacBook Pro, USB Drive">
+                </div>
+            
+                <div class="form-group">
+                    <label for="lost-item-category">Category*</label>
+                    <select id="lost-item-category" name="category" required>
+                        <option value="">Select category</option>
+                        <option value="laptop">Laptop</option>
+                        <option value="phone">Phone/Tablet</option>
+                        <option value="accessory">Accessory (Charger, Mouse, etc.)</option>
+                        <option value="storage">Storage Device (USB, HDD)</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            
+                <div class="form-group">
+                    <label for="lost-item-description">Description*</label>
+                    <textarea id="lost-item-description" name="description" required
+                    placeholder="Detailed description including brand, model, color, distinguishing features"></textarea>
+                </div>
+            
+                <div class="form-group">
+                    <label for="lost-item-location">Where was it lost?*</label>
+                    <input type="text" id="lost-item-location" name="location" required
+                    placeholder="e.g., Computer Lab 3, ICT Building 2nd floor">
+                </div>
+            
+                <div class="form-group">
+                    <label for="lost-item-date">Date Lost*</label>
+                    <input type="date" id="lost-item-date" name="date" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="lost-item-image">Upload Image (optional)</label>
+                    <input type="file" id="lost-item-image" name="image" accept="image/*">
+                </div>
+            
+                <div class="form-group">
+                    <label for="lost-item-contact">Your Contact Information*</label>
+                    <input type="text" id="lost-item-contact" name="contact" required placeholder="Email or phone number">
+                </div>
+            
+                <button type="submit" class="btn primary">Submit Report</button>
+            </form>
+            
+        </section>
+    </body>
+</html>
